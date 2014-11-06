@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage{graphicx}
+\begin{document}
+\hfill Evan Schlomann \& Parker Evans
+
+\hfill Digital Design Lab
+
+\hfill Project Proposal
+
+\hfill \today \\
+
+\vspace{1cm}
+
+\noindent{\large Sleep Monitor and Alarm}
+
+Use a Rasperry Pi embedded device with an assortment of sensors (accelerometer, lightsensors, microphone, ect.) connected through bluetooth or wifi to an android device in order to characterize sleep patterns for both individual nights and longer periods of time. The android device would store movement data as well as audio and light data in order to characterize REM cycles. Additionaly the app would use the data to determine the optimum wake up point based on a relative alarm. For example if the user wanted to wake up at 9am, the app would choose a point between 8:30am and 9:00am where the user is clearly not in a REM cycle (movement and noise levels are relatively high). 
+
+
+
+\end{document}
