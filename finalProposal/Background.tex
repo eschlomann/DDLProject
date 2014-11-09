@@ -1,5 +1,20 @@
 \documentclass[finalProposal.tex]{subfiles}
 \begin{document}
 
+{\Large Background}
+
+The module itself will contain a heart rate sensor and a galvanic skin response monitor to record pertinent data. The heart rate monitor is a simple circuit that consists of an led and photo resistor
+which will vary the voltage to the circuit based on diastolic and systolic blood pressures. Diastolic blood pressure is the minimum pressure in the arteries and systolic is the maximum pressure. This
+signal can then be amplified and filtered to produce the classic heartbeat signal that can be read by an ADC. The galvanic skin response(GSR) is also a fairly straight-forward circuit that measures
+the electrical conductance of the skin which will vary depending on the amount of sweat-induced moisture on the skin. This circuit requires two leads that will be connected to two different fingers.
+These leads will feed into the circuit where the signal is filtered then amplified to produce an analog signal that can be measured by an ADC. Since this project uses a Raspberry Pi B+ which doesn't have
+an ADC on the board itself, the output from both the heart rate monitor and the GSR must both be converted to a digital signal using an external ADC. These two outputs can then be passed to the GPIO
+pins of the Raspberry Pi. The data can be processed on the Pi and any abnormalities can be reported to the application that is running on the android device over bluetooth.  
+
+Running on the Pi itself, a program will be using peak detection to determine the heart rate of the user. A person's heart rate will decrease during sleep but it varies depending on which sleep stage
+they are in. During slow wave sleep, the heart rate is the lowest and will increase by approximately 10\% from slow wave sleep to stage 2 sleep, to stage 1 sleep or REM sleep, to waking. These values
+provide approximate thresholds that can be used to attempt to determine what sleep stage a user is in along with supporting data from the GSR which can be related to how relaxed a person is. The output
+from the GSR will increase from its baseline value as the user becomes more stressed (or experiences less restful sleep).
+
 \end{document}
 
